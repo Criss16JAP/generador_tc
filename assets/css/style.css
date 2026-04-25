@@ -1,0 +1,141 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Color de respaldo oscuro */
+    /* AQUÍ CARGAMOS TU IMAGEN DE FONDO */
+    background-image: url('../img/fondo.jpg'); /* Cambia a .jpg si tu fondo es jpg */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor que agrupa el header y la tabla */
+.contenedor-principal {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espacio entre el logo y la tabla */
+}
+
+/* Estilos del Encabezado (Logo + Texto) */
+.header-torneo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-torneo {
+    width: 120px; /* Ajusta este tamaño según veas el logo */
+    height: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.6)); /* Sombra para que resalte */
+}
+
+.titulo-torneo {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 42px; /* Tamaño de la letra */
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1; /* Junta un poco más las dos líneas */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8); /* Sombra para que se lea sobre cualquier fondo */
+}
+
+/* Estilos de la Tabla */
+.contenedor-tabla {
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px); /* Efecto cristalino moderno, opcional */
+}
+
+.titulo-tabla {
+    background-color: #fff;
+    color: #231A3F;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente oscuro para las celdas */
+}
+
+thead {
+    background-color: #fff;
+    color: #333;
+}
+
+th {
+    padding: 12px 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Ajuste de columnas */
+th.pos { width: 50px; }
+th.escudo { width: 60px; }
+th.equipo { text-align: left; padding-left: 10px; }
+th.pts { width: 60px; color: #44B1E6; }
+
+tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Efecto hover un poco más notorio */
+}
+
+td {
+    padding: 10px 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+td.equipo {
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+/* Estilo para el Escudo */
+.img-escudo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+    display: block;
+    margin: 0 auto;
+}
+
+td.pts {
+    color: #44B1E6;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.dg.positiva { color: #4caf50; }
+.dg.negativa { color: #f44336; }
