@@ -139,3 +139,136 @@ td.pts {
 
 .dg.positiva { color: #4caf50; }
 .dg.negativa { color: #f44336; }
+
+/* =========================================
+   ESTILOS PARA EL FIXTURE / JORNADAS
+   ========================================= */
+
+.contenedor-fixture {
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(5px);
+}
+
+.cuerpo-fixture {
+    display: flex;
+    flex-direction: column;
+}
+
+.dia-bloque {
+    border-bottom: 2px solid #222;
+}
+
+.titulo-dia {
+    background-color: #333; /* Gris oscuro para separar los días */
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    border-bottom: 1px solid #d32f2f; /* Línea roja sutil de acento */
+}
+
+.partido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s;
+}
+
+.partido:last-child {
+    border-bottom: none;
+}
+
+.partido:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.equipo {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.equipo.local {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.equipo.visitante {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.nombre-equipo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Espaciado de los escudos en el fixture */
+.equipo.local .img-escudo {
+    margin-left: 15px;
+}
+
+.equipo.visitante .img-escudo {
+    margin-right: 15px;
+}
+
+.info-partido {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hora {
+    font-size: 13px;
+    color: #bbb;
+    background-color: rgba(0,0,0,0.5);
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.vs {
+    font-weight: 900;
+    color: #44B1E6;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Estilos para el equipo que descansa */
+.bloque-descanso {
+    background-color: rgba(211, 47, 47, 0.1); /* Fondo rojizo muy suave */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.texto-descanso {
+    font-size: 14px;
+    color: #ddd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.equipo-libre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #fff;
+}
