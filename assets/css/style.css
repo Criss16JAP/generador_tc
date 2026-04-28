@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #111; 
-    background-image: url('/assets/img/fondo.jpg');
+    background-image: url('../img/fondo-cancha.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
