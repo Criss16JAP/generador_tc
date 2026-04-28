@@ -464,3 +464,60 @@ td.pts {
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
     margin: 30px 0; /* Margen reducido para que no quede tan lejos un partido del otro */
 }
+
+/* =========================================
+   MENÚ DE NAVEGACIÓN OCULTO (Solo para uso interno)
+   ========================================= */
+
+/* Creamos un área invisible de 20px en el borde superior de la pantalla */
+.zona-activacion-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 9998;
+}
+
+/* Estilos del menú (inicia escondido arriba) */
+.menu-oculto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(68, 177, 230, 0.95); /* Azul primario casi sólido */
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 9999;
+    /* La animación que lo oculta desplazándolo hacia arriba al 100% de su tamaño */
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* La magia: Si pasas el mouse por la zona invisible o por el menú mismo, este baja */
+.zona-activacion-menu:hover + .menu-oculto,
+.menu-oculto:hover {
+    transform: translateY(0);
+}
+
+/* Estilo de los botones del menú */
+.menu-oculto a {
+    color: #1B1B1B;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 8px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.menu-oculto a:hover {
+    background-color: #F2CA4D; /* Dorado al pasar el mouse */
+    transform: scale(1.05);
+}
