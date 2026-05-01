@@ -1,8 +1,10 @@
-/* Estilos Generales */
+/* =========================================
+   1. ESTILOS GENERALES Y BASE
+   ========================================= */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #111; 
-    background-image: url('../img/fondo-cancha.jpg'); 
+    background-image: url('/assets/img/fondo.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -15,7 +17,6 @@ body {
     padding: 20px;
 }
 
-/* Contenedor que agrupa el header y la tabla */
 .contenedor-principal {
     width: 100%;
     max-width: 900px;
@@ -25,7 +26,7 @@ body {
     gap: 30px; 
 }
 
-/* Estilos del Encabezado (Logo + Texto) */
+/* Encabezado (Logo + Texto) */
 .header-torneo {
     display: flex;
     align-items: center;
@@ -52,21 +53,71 @@ body {
 }
 
 /* =========================================
-   ESTILOS DE LA TABLA
+   2. MENÚ DE NAVEGACIÓN OCULTO
+   ========================================= */
+.zona-activacion-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 9998;
+}
+
+.menu-oculto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(68, 177, 230, 0.95);
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 9999;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.zona-activacion-menu:hover + .menu-oculto,
+.menu-oculto:hover {
+    transform: translateY(0);
+}
+
+.menu-oculto a {
+    color: #1B1B1B;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 8px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.menu-oculto a:hover {
+    background-color: #F2CA4D;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   3. ESTILOS DE LA TABLA DE POSICIONES
    ========================================= */
 .contenedor-tabla {
     width: 100%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.7);
     border-radius: 8px;
     overflow: hidden;
-    /* Efecto Glass principal */
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px); 
 }
 
 .titulo-tabla {
     background-color: #fff;
-    color: #231A3F; /* Azul oscuro corporativo */
+    color: #231A3F;
     text-align: center;
     padding: 15px;
     font-size: 24px;
@@ -81,7 +132,6 @@ table {
     border-collapse: collapse;
     color: #fff;
     font-size: 15px;
-    /* Reducido de 0.6 a 0.2 para mantener la transparencia */
     background-color: rgba(0, 0, 0, 0.2); 
 }
 
@@ -98,7 +148,6 @@ th {
     border-bottom: 2px solid #ddd;
 }
 
-/* Ajuste de columnas */
 th.pos { width: 50px; }
 th.escudo { width: 60px; }
 th.equipo { text-align: left; padding-left: 10px; }
@@ -143,17 +192,16 @@ td.pts {
 .dg.negativa { color: #f44336; }
 
 /* =========================================
-   FIXTURE OPTIMIZADO (GRID 2x2)
+   4. FIXTURE BASE (GRID Y MINITARGETAS)
    ========================================= */
 .contenedor-fixture-grid {
     width: 100%;
     max-width: 950px;
-    /* Reducido de 0.7 a 0.3 para permitir el efecto glass */
     background-color: rgba(0, 0, 0, 0.3); 
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-    backdrop-filter: blur(12px); /* Blur más fuerte para compensar */
+    backdrop-filter: blur(12px); 
 }
 
 .grid-dias {
@@ -164,7 +212,6 @@ td.pts {
 }
 
 .dia-card {
-    /* Reducido de 0.8 a 0.2 para que no mate la transparencia */
     background-color: rgba(0, 0, 0, 0.2); 
     min-height: 220px;
     display: flex;
@@ -180,7 +227,7 @@ td.pts {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 2px solid #44B1E6; /* Acento primario */
+    border-bottom: 2px solid #44B1E6;
 }
 
 .lista-partidos {
@@ -218,22 +265,22 @@ td.pts {
 }
 
 .img-escudo-mini {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
     margin-bottom: 5px;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
 }
 
 .equipo-mini span {
-    font-size: 16px;
+    font-size: 11px;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.1;
 }
 
 .vs-mini {
-    color: #F2CA4D; /* Acento dorado en lugar del rojo genérico */
+    color: #F2CA4D; 
     font-style: italic;
     font-weight: 900;
     font-size: 16px;
@@ -242,7 +289,7 @@ td.pts {
 .hora-mini {
     display: inline-block;
     margin-top: 8px;
-    font-size: 15px;
+    font-size: 10px;
     background: rgba(0, 0, 0, 0.5);
     padding: 2px 10px;
     border-radius: 10px;
@@ -250,11 +297,10 @@ td.pts {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Badge de Jornada aplazada */
 .badge-aplazado {
     display: inline-block;
-    background-color: #F2CA4D; /* Acento dorado */
-    color: #1B1B1B; /* Texto oscuro corporativo */
+    background-color: #F2CA4D;
+    color: #1B1B1B;
     font-size: 10px;
     font-weight: bold;
     text-transform: uppercase;
@@ -265,7 +311,6 @@ td.pts {
     text-align: center;
 }
 
-/* Bloque de descanso al final */
 .bloque-descanso-final {
     background-color: #fff;
     color: #1B1B1B;
@@ -279,12 +324,12 @@ td.pts {
 }
 
 .bloque-descanso-final strong {
-    color: #44B1E6; /* Acento primario */
+    color: #44B1E6; 
     font-size: 20px;
 }
 
 /* =========================================
-   ESTILOS EXCLUSIVOS PARA RESULTADOS (Flashscore Style)
+   5. RESULTADOS (Flashscore Style + Layout Ancho)
    ========================================= */
 
 /* Lógica de Ganador / Perdedor / Empate */
@@ -295,7 +340,7 @@ td.pts {
 
 .equipo-mini.perdedor span {
     font-weight: normal;
-    color: #999999; /* Texto más apagado para destacar al ganador */
+    color: #999999; 
 }
 
 .equipo-mini.empate span {
@@ -318,7 +363,7 @@ td.pts {
 .goles {
     font-size: 22px;
     font-weight: 900;
-    color: #F2CA4D; /* Acento dorado para los números */
+    color: #F2CA4D; 
 }
 
 .goles-separador {
@@ -352,33 +397,74 @@ td.pts {
     border-radius: 10px;
 }
 
-/* =========================================
-   ESTILOS PARA PARTIDO INDIVIDUAL (DESTACADO)
-   ========================================= */
+/* Layout Resultados (Jornada Ancho Completo + 2 Columnas) */
+.contenedor-resultados {
+    max-width: 1050px; 
+}
 
-.contenedor-partido-destacado {
+.grid-jornadas-full {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; 
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dia-card-full {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-partidos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px 40px; 
+    padding: 20px 30px;
+}
+
+.lista-partidos-grid .partido-mini {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lista-partidos-grid .partido-mini:nth-last-child(1),
+.lista-partidos-grid .partido-mini:nth-last-child(2) {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* =========================================
+   6. PARTIDOS DEL DÍA (Cartel / Destacado)
+   ========================================= */
+.contenedor-partidos-dia {
     width: 100%;
-    max-width: 800px;
-    background-color: rgba(0, 0, 0, 0.4); /* Cristal oscuro */
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.15); 
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.9);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    padding: 35px; /* Reducido un poco para ganar espacio */
+    padding: 30px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.encabezado-dia {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.encabezado-destacado {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
 }
 
 .badge-jornada {
-    background-color: #44B1E6; /* Azul primario */
-    color: #1B1B1B; /* Texto oscuro */
-    font-size: 16px; /* Reducido levemente */
+    background-color: #44B1E6; 
+    color: #1B1B1B; 
+    font-size: 16px; 
     font-weight: 900;
     text-transform: uppercase;
     padding: 6px 20px;
@@ -387,137 +473,94 @@ td.pts {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-.cuerpo-destacado {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+.fecha-titular {
+    font-size: 32px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 15px 0 0 0;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
 }
 
-.equipo-destacado {
+.lista-partidos-dia {
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.partido-fila {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 35%;
-    text-align: center;
+    width: 100%;
+    padding: 15px 0;
 }
 
-/* Escudos reducidos proporcionalmente */
-.img-escudo-destacado {
-    width: 145px; /* Bajó de 180px */
-    height: 145px; /* Bajó de 180px */
+.equipo-dia {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.equipo-dia.local {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.equipo-dia.visitante {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.img-escudo-dia {
+    width: 100px; 
+    height: 100px;
     object-fit: contain;
-    margin-bottom: 15px; /* Menos margen para compactar */
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.7));
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.6));
 }
 
-.nombre-destacado {
-    font-size: 26px; /* Bajó de 32px */
+.equipo-dia.local .img-escudo-dia { margin-left: 20px; }
+.equipo-dia.visitante .img-escudo-dia { margin-right: 20px; }
+
+.nombre-dia {
+    font-size: 24px;
     font-weight: 900;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 1.1;
 }
 
-.centro-destacado {
+.centro-dia {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    justify-content: center;
+    width: 20%;
 }
 
-.vs-destacado {
-    font-size: 55px; /* Bajó de 70px */
-    font-weight: 900;
-    color: #F2CA4D; /* Acento dorado */
-    font-style: italic;
-    line-height: 1;
-    margin-bottom: 15px;
-    text-shadow: 0 5px 15px rgba(0,0,0,0.6);
-}
-
-.fecha-destacada {
-    font-size: 16px; /* Bajó de 18px */
-    color: #ddd;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-.hora-destacada {
-    font-size: 22px; /* Bajó de 26px */
-    font-weight: 900;
+.hora-dia {
     background-color: #1B1B1B;
     color: #fff;
-    padding: 8px 24px;
-    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* --- DIVISOR PARA SEPARAR PARTIDOS --- */
-.divisor-destacado {
-    width: 80%;
+.vs-dia {
+    font-size: 40px;
+    font-weight: 900;
+    color: #F2CA4D; 
+    font-style: italic;
+    line-height: 1;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.divisor-partido {
+    width: 100%;
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-    margin: 30px 0; /* Margen reducido para que no quede tan lejos un partido del otro */
-}
-
-/* =========================================
-   MENÚ DE NAVEGACIÓN OCULTO (Solo para uso interno)
-   ========================================= */
-
-/* Creamos un área invisible de 20px en el borde superior de la pantalla */
-.zona-activacion-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    z-index: 9998;
-}
-
-/* Estilos del menú (inicia escondido arriba) */
-.menu-oculto {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(68, 177, 230, 0.95); /* Azul primario casi sólido */
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    z-index: 9999;
-    /* La animación que lo oculta desplazándolo hacia arriba al 100% de su tamaño */
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-/* La magia: Si pasas el mouse por la zona invisible o por el menú mismo, este baja */
-.zona-activacion-menu:hover + .menu-oculto,
-.menu-oculto:hover {
-    transform: translateY(0);
-}
-
-/* Estilo de los botones del menú */
-.menu-oculto a {
-    color: #1B1B1B;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 14px;
-    padding: 8px 20px;
-    background-color: #fff;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background 0.2s, transform 0.1s;
-}
-
-.menu-oculto a:hover {
-    background-color: #F2CA4D; /* Dorado al pasar el mouse */
-    transform: scale(1.05);
+    margin: 10px 0;
 }

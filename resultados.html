@@ -14,7 +14,7 @@
         <a href="/">Tabla de Posiciones</a>
         <a href="/fixture">Fixture</a>
         <a href="/resultados">Resultados</a>
-        <a href="/partido">Partidos del Día</a>
+        <a href="/partido-individual">Partidos del Día</a>
     </nav>
 
     <div class="contenedor-principal">
@@ -26,33 +26,15 @@
             </div>
         </header>
 
-        <div class="contenedor-fixture-grid">
+        <div class="contenedor-fixture-grid contenedor-resultados">
             <h1 class="titulo-tabla">Últimos Resultados</h1>
             
-            <div class="grid-dias">
+            <div class="grid-jornadas-full">
                 
-                <div class="dia-card">
+                <div class="dia-card-full">
                     <h2 class="titulo-dia">Jornada 1</h2>
-                    <div class="lista-partidos">
+                    <div class="lista-partidos-grid">
 
-                         <div class="partido-mini">
-                            <div class="enfrentamiento">
-                                <div class="equipo-mini perdedor">
-                                    <img src="assets/img/Los-Fresas-sf.png" class="img-escudo-mini">
-                                    <span>Los Fresas</span>
-                                </div>
-                                <div class="marcador-caja">
-                                    <span class="goles">5</span>
-                                    <span class="goles-separador">-</span>
-                                    <span class="goles">10</span>
-                                </div>
-                                <div class="equipo-mini ganador">
-                                    <img src="assets/img/alianza-sf.png" class="img-escudo-mini">
-                                    <span>Alianza Samaria</span>
-                                </div>
-                            </div>
-                            <div class="hora-mini">8 Abril</div>
-                        
                         <div class="partido-mini">
                             <div class="enfrentamiento">
                                 <div class="equipo-mini empate">
@@ -72,6 +54,23 @@
                             <div class="hora-mini">15 Abril</div>
                         </div>
 
+                        <div class="partido-mini">
+                            <div class="enfrentamiento">
+                                <div class="equipo-mini perdedor">
+                                    <img src="assets/img/Los-Fresas-sf.png" class="img-escudo-mini">
+                                    <span>Los Fresas</span>
+                                </div>
+                                <div class="marcador-caja">
+                                    <span class="goles">5</span>
+                                    <span class="goles-separador">-</span>
+                                    <span class="goles">10</span>
+                                </div>
+                                <div class="equipo-mini ganador">
+                                    <img src="assets/img/alianza-sf.png" class="img-escudo-mini">
+                                    <span>Alianza Samaria</span>
+                                </div>
+                            </div>
+                            <div class="hora-mini">8 Abril</div>
                         </div>
 
                         <div class="partido-mini">
@@ -92,6 +91,25 @@
                             </div>
                             <div class="hora-mini">15 Abril</div>
                         </div>
+                        
+                        <div class="partido-mini">
+                            <div class="enfrentamiento">
+                                <div class="equipo-mini ganador">
+                                    <img src="assets/img/por-defecto.png" class="img-escudo-mini">
+                                    <span>Amigos de Nacho</span>
+                                </div>
+                                <div class="marcador-caja">
+                                    <span class="goles">6</span>
+                                    <span class="goles-separador">-</span>
+                                    <span class="goles">3</span>
+                                </div>
+                                <div class="equipo-mini perdedor">
+                                    <img src="assets/img/amigos-del-bola.png" class="img-escudo-mini">
+                                    <span>Amigos del bola</span>
+                                </div>
+                            </div>
+                            <div class="hora-mini">27 Abril</div>
+                        </div>
 
                         <div class="partido-mini">
                             <span class="badge-pendiente">Pendiente</span>
@@ -110,26 +128,27 @@
                         </div>
 
                         <div class="partido-mini">
+                            <span class="badge-pendiente">Pendiente</span>
                             <div class="enfrentamiento">
                                 <div class="equipo-mini">
-                                    <img src="assets/img/por-defecto.png" class="img-escudo-mini">
-                                    <span>Amigos de Nacho</span>
+                                    <img src="assets/img/Fly-Soccer-sf.png" class="img-escudo-mini">
+                                    <span>Fly Soccer</span>
                                 </div>
                                 <span class="vs-mini">VS</span>
                                 <div class="equipo-mini">
-                                    <img src="assets/img/amigos-del-bola.png" class="img-escudo-mini">
-                                    <span>Amigos del bola</span>
+                                    <img src="assets/img/por-defecto.png" class="img-escudo-mini">
+                                    <span>Los Chamos FC</span>
                                 </div>
                             </div>
-                            <div class="hora-mini">Lunes 26/04 - 7:30 pm</div>
+                            <div class="texto-pendiente">Pendiente a programación</div>
                         </div>
 
                     </div>
                 </div>
 
-                <div class="dia-card">
+                <div class="dia-card-full">
                     <h2 class="titulo-dia">Jornada 2</h2>
-                    <div class="lista-partidos">
+                    <div class="lista-partidos-grid">
                         
                         <div class="partido-mini">
                             <div class="enfrentamiento">
@@ -221,6 +240,143 @@
                                 </div>
                             </div>
                             <div class="texto-pendiente">Pendiente a programación</div>
+                        </div>
+                        
+                        <div class="partido-mini">
+                            <span class="badge-pendiente">Pendiente</span>
+                            <div class="enfrentamiento">
+                                <div class="equipo-mini">
+                                    <img src="assets/img/por-defecto.png" class="img-escudo-mini">
+                                    <span>Amigos de Nacho</span>
+                                </div>
+                                <span class="vs-mini">VS</span>
+                                <div class="equipo-mini">
+                                    <img src="assets/img/por-defecto.png" class="img-escudo-mini">
+                                    <span>Los Chamos FC</span>
+                                </div>
+                            </div>
+                            <div class="texto-pendiente">Pendiente a programación</div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="dia-card-full">
+                    <h2 class="titulo-dia">Jornada 3</h2>
+                    <div class="lista-partidos-grid">
+                        
+                        <div class="partido-mini">
+                            <div class="enfrentamiento">
+                                <div class="equipo-mini ganador">
+                                    <img src="assets/img/san-pedro-fc-sf.png" class="img-escudo-mini">
+                                    <span>San Pedro FC</span>
+                                </div>
+                                <div class="marcador-caja">
+                                    <span class="goles">6</span>
+                                    <span class="goles-separador">-</span>
+                                    <span class="goles">3</span>
+                                </div>
+                                <div class="equipo-mini perdedor">
+                                    <img src="assets/img/por-defecto.png" class="img-escudo-mini">
+                                    <span>Los Chamos FC</span>
+                                </div>
+                            </div>
+                            <div class="hora-mini">28 Abril</div>
+                        </div>
+
+                        <div class="partido-mini">
+                            <div class="enfrentamiento">
+                                <div class="equipo-mini perdedor">
+                                    <img src="assets/img/la30pte.png" class="img-escudo-mini">
+                                    <span>La 30 pte</span>
+                                </div>
+                                <div class="marcador-caja">
+                                    <span class="goles">3</span>
+                                    <span class="goles-separador">-</span>
+                                    <span class="goles">8</span>
+                                </div>
+                                <div class="equipo-mini ganador">
+                                    <img src="assets/img/Los-Fresas-sf.png" class="img-escudo-mini">
+                                    <span>Los Fresas</span>
+                                </div>
+                            </div>
+                            <div class="hora-mini">28 Abril</div>
+                        </div>
+
+                        <div class="partido-mini">
+                            <div class="enfrentamiento">
+                                <div class="equipo-mini ganador">
+                                    <img src="assets/img/alianza-sf.png" class="img-escudo-mini">
+                                    <span>Alianza Samaria</span>
+                                </div>
+                                <div class="marcador-caja">
+                                    <span class="goles">6</span>
+                                    <span class="goles-separador">-</span>
+                                    <span class="goles">2</span>
+                                </div>
+                                <div class="equipo-mini perdedor">
+                                    <img src="assets/img/la-rosalia.png" class="img-escudo-mini">
+                                    <span>La Rosalia FC</span>
+                                </div>
+                            </div>
+                            <div class="hora-mini">30 Abril</div>
+                        </div>
+                        
+                        <div class="partido-mini">
+                            <div class="enfrentamiento">
+                                <div class="equipo-mini perdedor">
+                                    <img src="assets/img/Fly-Soccer-sf.png" class="img-escudo-mini">
+                                    <span>Fly Soccer</span>
+                                </div>
+                                <div class="marcador-caja">
+                                    <span class="goles">4</span>
+                                    <span class="goles-separador">-</span>
+                                    <span class="goles">7</span>
+                                </div>
+                                <div class="equipo-mini ganador">
+                                    <img src="assets/img/la-bonga.png" class="img-escudo-mini">
+                                    <span>La Bonga</span>
+                                </div>
+                            </div>
+                            <div class="hora-mini">30 Abril</div>
+                        </div>
+                        
+                        <div class="partido-mini">
+                            <div class="enfrentamiento">
+                                <div class="equipo-mini ganador">
+                                    <img src="assets/img/Unicolinas.png" class="img-escudo-mini">
+                                    <span>Unicolinas</span>
+                                </div>
+                                <div class="marcador-caja">
+                                    <span class="goles">8</span>
+                                    <span class="goles-separador">-</span>
+                                    <span class="goles">7</span>
+                                </div>
+                                <div class="equipo-mini perdedor">
+                                    <img src="assets/img/por-defecto.png" class="img-escudo-mini">
+                                    <span>Amigos de Nacho</span>
+                                </div>
+                            </div>
+                            <div class="hora-mini">29 Abril</div>
+                        </div>
+                        
+                        <div class="partido-mini">
+                            <div class="enfrentamiento">
+                                <div class="equipo-mini ganador">
+                                    <img src="assets/img/Minca.png" class="img-escudo-mini">
+                                    <span>Minca FC</span>
+                                </div>
+                                <div class="marcador-caja">
+                                    <span class="goles">13</span>
+                                    <span class="goles-separador">-</span>
+                                    <span class="goles">1</span>
+                                </div>
+                                <div class="equipo-mini perdedor">
+                                    <img src="assets/img/amigos-del-bola.png" class="img-escudo-mini">
+                                    <span>Amigos del bola</span>
+                                </div>
+                            </div>
+                            <div class="hora-mini">29 Abril</div>
                         </div>
 
                     </div>
