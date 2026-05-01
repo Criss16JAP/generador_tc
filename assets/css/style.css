@@ -334,18 +334,18 @@ td.pts {
 
 /* Lógica de Ganador / Perdedor / Empate */
 .equipo-mini.ganador span {
-    font-weight: 900;
+    font-weight: 900; /* Extra negrita para el ganador */
     color: #ffffff;
 }
 
 .equipo-mini.perdedor span {
-    font-weight: normal;
-    color: #999999; 
+    font-weight: 400; /* Peso normal para el perdedor */
+    color: #ffffff; /* Blanco total para no perder legibilidad */
 }
 
 .equipo-mini.empate span {
-    font-weight: normal;
-    color: #cccccc;
+    font-weight: 400; /* Peso normal para el empate */
+    color: #ffffff; /* Blanco total */
 }
 
 /* Caja de Marcador central */
